@@ -1,5 +1,16 @@
-canvas {
-    border: solid 2px red;
-    display: block; 
-    margin: 0 auto;
+.canvases {
+    position: relative;
+    display: block;
+}
+
+.canvas-bg {
+    position: absolute;
+}
+
+.canvas {
+    position: absolute;
+}
+
+html {
+    background-color: pink;
 }
