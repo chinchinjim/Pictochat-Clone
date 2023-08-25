@@ -20,8 +20,6 @@
             cv.width = window.innerWidth * 0.9;
         }
 
-        
-
         function drawBg(){
             ctxBg.fillStyle = "#B9B8F1";
             const pixel = canvas.width / 256;
@@ -43,8 +41,18 @@
             ctx.beginPath();
         }
     
+        
+
+        const font = new FontFace('pictochat', 'url(../fonts/pictochat.ttf)');
+        font.load().then((loadedFont) => {
+            document.fonts.add(loadedFont);
+            ctx.font = "100px pictochat";
+            drawNameTag();
+        }).catch((error) => {
+            console.error('Font could not be loaded:', error);
+        });
+
         ctx.lineWidth = 10;
-        drawNameTag();
         
     
         function drawNameTag(){
@@ -108,11 +116,7 @@
             ctx.fillRect(canvas.width/4 - (3 * pixel), canvas.height / 5 - (2 * pixel), pixel, pixel);
             ctx.fillRect(pixel, canvas.height / 5 - pixel, canvas.width/4 - (4 * pixel), pixel);
 
-            //writing name
-            ctx.font = ;
-            ctx.fillText("Hello World", 3 * pixel, canvas.height / 15);
-
-            ctx.fillText()
+            ctx.fillText('Maria', 4 * pixel, canvas.height / 7);
 
             //restores back to erase mode if erase mode was on
             if(eraseModeOn){

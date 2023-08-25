@@ -1,3 +1,11 @@
+@font-face {
+    font-family: pictochat;
+    src: url('../fonts/nintendo_ext_003.ttf'),
+        url('../fonts/pictochat.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .canvases {
     position: relative;
     display: block;
