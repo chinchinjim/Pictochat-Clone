@@ -15,8 +15,8 @@
         window.addEventListener('resize', resizeCanvas);
     
         function resizeCanvas(cv){
-            cv.height = window.innerHeight * 0.8;
-            cv.width = window.innerWidth * 0.9;
+            cv.height = window.innerHeight * 0.45;
+            cv.width = window.innerWidth * 0.65;
         }
 
         function drawBg(){
@@ -179,15 +179,17 @@
         
         const clearBtn = document.querySelector('.clear');
         clearBtn.addEventListener('click', clear);
-    
+
         function clone(){
             const cloneCanvas = document.createElement("canvas");
             cloneCanvas.classList.add("clone-canvas");
-            document.body.appendChild(cloneCanvas);
+            const chatMessages = document.querySelector('.chat-messages');
+            chatMessages.appendChild(cloneCanvas);
             resizeCanvas(cloneCanvas);
             var destCtx = cloneCanvas.getContext('2d');
             destCtx.drawImage(canvas, 0, 0);
             cloneCanvas.style.marginTop = cloneCanvas.height;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
         
         const cloneBtn = document.querySelector('.clone');

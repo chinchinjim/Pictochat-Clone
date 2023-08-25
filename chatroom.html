@@ -10,18 +10,25 @@
 </head>
 <body>
     <h1>Welcome to Pictochat</h1> 
-    <button class="draw">Draw</button>
-    <button class="erase">Erase</button>
-    <button class="draw-size-1">1</button>
-    <button class="draw-size-2">2</button>
-    <button class="draw-size-3">3</button>
-    <button class="clear">Clear</button>
-    <button class="clone">Clone</button>
-    <div class="canvases">
-        <canvas class="canvas-bg"></canvas>
-        <canvas class="canvas"></canvas>
+    <div class="top-screen">
+        <div class="top-sidebar"></div>
+        <div class="chat-messages"></div>
     </div>
-   
+    <div class="bottom-screen">
+        <div class="bottom-sidebar">
+            <button class="draw">Draw</button>
+            <button class="erase">Erase</button>
+            <button class="draw-size-1">1</button>
+            <button class="draw-size-2">2</button>
+            <button class="draw-size-3">3</button>
+            <button class="clear">Clear</button>
+            <button class="clone">Clone</button>
+        </div>
+        <div class="canvases">
+            <canvas class="canvas-bg"></canvas>
+            <canvas class="canvas"></canvas>
+        </div>
+    </div>
 
     <script src="js/chatroom.js"></script>
 </body>

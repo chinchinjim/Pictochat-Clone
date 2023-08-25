@@ -11,25 +11,56 @@ canvas {
     position: relative;
 }
 
+.bottom-screen {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 10vw 10vw 70vw 10vw;
+}
+
+.top-sidebar {
+    grid-column: 2 / 2;
+}
+
+.top-screen {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 10vw 10vw 70vw 10vw;
+}
+
+.bottom-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 2 / 2; 
+}
+
 .canvases {
     position: relative;
-    display: block;
-    margin-bottom: 80vh;
+    grid-column: 3 / 3; 
 }
 
 .canvas-bg {
     position: absolute;
     display: block;
+    left: 2.5vw;
 }
 
 .canvas {
     position: absolute;
     display: block;
+    left: 2.5vw;
 }
 
 html {
     background-color: pink;
 }
 
+.chat-messages {
+    height: 50vh;
+    align-items: center;
+    overflow: auto;
+    grid-column: 3 / 3; 
+}
+
 .clone-canvas {
+    margin: 2rem auto 1rem;
 }
