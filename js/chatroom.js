@@ -12,7 +12,6 @@
         resizeCanvas(canvasBg);
         drawBg();
 
-    
         window.addEventListener('resize', resizeCanvas);
     
         function resizeCanvas(cv){
@@ -57,7 +56,7 @@
     
         function drawNameTag(){
             const pixel = canvas.width / 256;
-            var eraseModeOn;
+            var eraseModeOn = false;
             //switches to draw mode if erase mode was on
             if(ctx.globalCompositeOperation == 'destination-out'){
                 eraseModeOn = true;
@@ -116,7 +115,7 @@
             ctx.fillRect(canvas.width/4 - (3 * pixel), canvas.height / 5 - (2 * pixel), pixel, pixel);
             ctx.fillRect(pixel, canvas.height / 5 - pixel, canvas.width/4 - (4 * pixel), pixel);
 
-            ctx.fillText('Maria', 4 * pixel, canvas.height / 7);
+            ctx.fillText(userName, 4 * pixel, canvas.height / 7, 57 * pixel);
 
             //restores back to erase mode if erase mode was on
             if(eraseModeOn){
@@ -175,6 +174,7 @@
     
         function clear(){
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawNameTag();
         }
         
         const clearBtn = document.querySelector('.clear');
@@ -182,10 +182,12 @@
     
         function clone(){
             const cloneCanvas = document.createElement("canvas");
+            cloneCanvas.classList.add("clone-canvas");
             document.body.appendChild(cloneCanvas);
             resizeCanvas(cloneCanvas);
             var destCtx = cloneCanvas.getContext('2d');
             destCtx.drawImage(canvas, 0, 0);
+            cloneCanvas.style.marginTop = cloneCanvas.height;
         }
         
         const cloneBtn = document.querySelector('.clone');

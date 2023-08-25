@@ -6,19 +6,30 @@
     font-style: normal;
 }
 
+canvas {
+    display: block;
+    position: relative;
+}
+
 .canvases {
     position: relative;
     display: block;
+    margin-bottom: 80vh;
 }
 
 .canvas-bg {
     position: absolute;
+    display: block;
 }
 
 .canvas {
     position: absolute;
+    display: block;
 }
 
 html {
     background-color: pink;
+}
+
+.clone-canvas {
 }
