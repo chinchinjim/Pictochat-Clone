@@ -45,7 +45,7 @@
         const font = new FontFace('pictochat', 'url(../fonts/pictochat.ttf)');
         font.load().then((loadedFont) => {
             document.fonts.add(loadedFont);
-            ctx.font = "100px pictochat";
+            ctx.font = "8vh pictochat";
             drawNameTag();
         }).catch((error) => {
             console.error('Font could not be loaded:', error);
