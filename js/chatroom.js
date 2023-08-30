@@ -4,15 +4,26 @@
         const canvas = document.querySelector(".canvas");
         const ctx = canvas.getContext("2d");
 
+        const canvasText = document.querySelector(".canvas-text");
+        const ctxText = canvasText.getContext("2d");
+
         const canvasBg = document.querySelector(".canvas-bg");
         const ctxBg = canvasBg.getContext("2d");
+
+        //text variables
+        var line1 = '';
+        var line2 = '';
+        var line3 = '';
+        var line4 = '';
+        var line5 = '';
+        var charCount = 0;
 
         //resizing canvas
         resizeCanvas(canvas);
         resizeCanvas(canvasBg);
+        resizeCanvas(canvasText);
         drawBg();
-
-        window.addEventListener('resize', resizeCanvas);
+        const pixel = canvas.width / 256;
     
         function resizeCanvas(cv){
             cv.height = window.innerHeight * 0.45;
@@ -55,7 +66,7 @@
         
     
         function drawNameTag(){
-            const pixel = canvas.width / 256;
+            // const pixel = canvas.width / 256;
             var eraseModeOn = false;
             //switches to draw mode if erase mode was on
             if(ctx.globalCompositeOperation == 'destination-out'){
@@ -175,6 +186,12 @@
         function clear(){
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawNameTag();
+            charCount = 0;
+            line1 = '';
+            line2 = '';
+            line3 = '';
+            line4 = '';
+            line5 = '';
         }
         
         const clearBtn = document.querySelector('.clear');
@@ -188,6 +205,12 @@
             resizeCanvas(cloneCanvas);
             var destCtx = cloneCanvas.getContext('2d');
             destCtx.drawImage(canvas, 0, 0);
+            destCtx.font = "8vh pictochat";
+            destCtx.fillText(line5, 5 * pixel, 95 * pixel, canvas.width);
+            destCtx.fillText(line4, 5 * pixel, 75 * pixel, canvas.width);
+            destCtx.fillText(line3, 5 * pixel, 55 * pixel, canvas.width);
+            destCtx.fillText(line2, 5 * pixel, 35 * pixel, canvas.width);
+            destCtx.fillText(line1, 66 * pixel, 15 * pixel);
             cloneCanvas.style.marginTop = cloneCanvas.height;
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
@@ -213,7 +236,75 @@
         // userName.innerText = receivedData;
         // document.body.appendChild(userName);
 
-
+        window.addEventListener("keydown", function(e) {
+            ctxText.font = "8vh pictochat";
+            ctxText.fillStyle = "black";
+            charCount++;
+            if(e.key === "Backspace" || e.key === "Delete"){
+                charCount = charCount - 1;
+                if (charCount >= 142) {
+                    ctxText.clearRect(0, (canvas.height / 5) * 4, canvas.width, canvas.height / 5);
+                    line5 = line5.slice(0, -1);
+                    ctxText.fillText(line5, 5 * pixel, 95 * pixel, canvas.width);
+                    charCount = charCount - 1;
+                }
+                else if (charCount >= 103) {
+                    ctxText.clearRect(0, (canvas.height / 5) * 3, canvas.width, canvas.height / 5);
+                    line4 = line4.slice(0, -1);
+                    ctxText.fillText(line4, 5 * pixel, 75 * pixel, canvas.width);
+                    charCount = charCount - 1;
+                }
+                else if (charCount >= 66) {
+                    ctxText.clearRect(0, (canvas.height / 5) * 2, canvas.width , canvas.height / 5);
+                    line3 = line3.slice(0, -1);
+                    ctxText.fillText(line3, 5 * pixel, 55 * pixel, canvas.width);
+                    charCount = charCount - 1;
+                }
+                else if (charCount >= 29) {
+                    ctxText.clearRect(0, canvas.height / 5, canvas.width, canvas.height / 5);
+                    line2 = line2.slice(0, -1);
+                    ctxText.fillText(line2, 5 * pixel, 35 * pixel, canvas.width);
+                    charCount = charCount - 1;
+                }
+                else if(charCount < 29) {
+                    ctxText.clearRect(0, 0, canvas.width, canvas.height / 5);
+                    line1 = line1.slice(0, -1);
+                    ctxText.fillText(line1, 66 * pixel, 15 * pixel);
+                    if(charCount - 1 >= 0){
+                        charCount = charCount - 1;
+                    }
+                }
+            }
+            else if(charCount >= 181){
+                charCount--;
+                //full
+            }
+            else if(charCount >= 143){
+                ctxText.clearRect(5 * pixel, 81 * pixel, canvas.width - (8 * pixel), canvas.height / 5 - (5 * pixel));
+                line5 = line5 + e.key;
+                ctxText.fillText(line5, 5 * pixel, 95 * pixel, canvas.width);
+            }
+            else if(charCount >= 105){
+                ctxText.clearRect(5 * pixel, 63 * pixel, canvas.width - (8 * pixel), canvas.height / 5 - (5 * pixel));
+                line4 = line4 + e.key;
+                ctxText.fillText(line4, 5 * pixel, 75 * pixel, canvas.width);
+            }
+            else if (charCount >= 67){
+                ctxText.clearRect(5 * pixel, 43 * pixel, canvas.width - (8 * pixel), canvas.height / 5 - (5 * pixel));
+                line3 = line3 + e.key;
+                ctxText.fillText(line3, 5 * pixel, 55 * pixel, canvas.width);
+            }
+            else if (charCount >= 29){
+                ctxText.clearRect(5 * pixel, 23 * pixel, canvas.width - (8 * pixel), canvas.height / 5 - (5 * pixel));
+                line2 = line2 + e.key;
+                ctxText.fillText(line2, 5 * pixel, 35 * pixel, canvas.width);
+            }
+            else if (charCount < 29){
+                ctxText.clearRect(66 * pixel, 3 * pixel, (canvas.width / 4) * 3 - (4 * pixel), canvas.height / 5 - (5 * pixel));
+                line1 = line1 + e.key;
+                ctxText.fillText(line1, 66 * pixel, 15 * pixel);
+            }
+        });
     
     })
     

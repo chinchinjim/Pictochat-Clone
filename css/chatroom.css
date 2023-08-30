@@ -44,6 +44,12 @@ canvas {
     left: 2.5vw;
 }
 
+.canvas-text {
+    position: absolute;
+    display: block;
+    left: 2.5vw;
+}
+
 .canvas {
     position: absolute;
     display: block;
