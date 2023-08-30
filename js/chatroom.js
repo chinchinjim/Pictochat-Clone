@@ -184,7 +184,7 @@
         drawSize3Btn.addEventListener('click', drawSize3);
     
         function clear(){
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctxText.clearRect(0, 0, canvas.width, canvas.height);
             drawNameTag();
             charCount = 0;
             line1 = '';
