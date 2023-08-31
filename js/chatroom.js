@@ -29,8 +29,8 @@
         const pixel = canvas.width / 256;
     
         function resizeCanvas(cv){
-            cv.height = window.innerHeight * 0.35;
-            cv.width = window.innerWidth * 0.68;
+            cv.height = window.innerHeight * 0.30;
+            cv.width = window.innerWidth * 0.50;
         }
 
         function clearCorners(cv) {

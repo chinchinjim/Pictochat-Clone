@@ -1,0 +1,133 @@
+h1 {
+    color: #eee;
+    font-size: 3rem;
+}
+  
+.top-screen {
+    padding: 2rem 5rem;
+}
+
+.pictochat-logo {
+    height: 50vh;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+.bottom-screen{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.name-submit button{
+    font-family: 'pictochat';
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem 0.5rem 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.bottom-screen img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.name-submission {
+    grid-row: 2 / 3;
+}
+
+.name-submission input {
+    width: 50%;
+    height: 30%;
+    font-family: 'pictochat';
+    font-size: 3rem;
+}
+
+.right-controls {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    margin-bottom: 3rem;
+}
+
+.abxy-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.right-btn {
+    background-color: #111;
+    border-radius: 50%;
+    text-align: center;
+    padding: 15px 20px
+}
+
+.x-btn {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+.y-btn {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+.a-btn {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+}
+
+.b-btn {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+}
+
+.start-select-buttons {
+    margin-top: 20%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.right-small-btn {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #111;
+}
+
+
+.select-btn, .start-btn {
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    position: relative;
+}
+
+.start-btn .right-small-btn {
+    position: absolute;
+    top: 50%;
+}
+.start-btn p {
+    position: absolute;
+    top: 24%;
+}
+
+.start-select-buttons p {
+    grid-column: 2 / 3;
+    position: absolute;
+    left: 10px;
+}
+
+.select-btn .right-small-btn {
+    grid-column: 1 / 2;
+    position: absolute;
+    top: 25%;
+}

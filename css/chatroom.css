@@ -1,7 +1,7 @@
 @font-face {
     font-family: pictochat;
-    src: url('../fonts/nintendo_ext_003.ttf'),
-        url('../fonts/pictochat.ttf');
+    src: url('../fonts/nintendo_ext_003.ttf');
+    src: url('../fonts/pictochat.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,61 +11,28 @@ canvas {
     position: relative;
 }
 
-.bottom-screen {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: 10vw 10vw 70vw 10vw;
-}
-
-.top-sidebar {
-    grid-column: 2 / 2;
-}
-
-.top-screen {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: 10vw 10vw 70vw 10vw;
-}
-
-.bottom-sidebar {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column: 2 / 2; 
-}
-
 .canvases {
     position: relative;
-    grid-column: 3 / 3; 
 }
 
 .canvas-bg {
     position: absolute;
     display: block;
-    left: 1vw;
 }
 
 .canvas-text {
     position: absolute;
     display: block;
-    left: 1vw;
 }
 
 .canvas {
     position: absolute;
     display: block;
-    left: 1vw;
-    /* background-color: white; */
-}
-
-html {
-    background-color: pink;
 }
 
 .chat-messages {
-    height: 80vh;
+    height: 50vh;
     overflow: auto;
-    grid-column: 3 / 3; 
-    width: 70vw;
     background: repeating-linear-gradient(
         #aaaaaa,
         #aaaaaa 10px,
@@ -74,7 +41,7 @@ html {
 }
 
 .spacer{
-    height: 65vh;
+    height: 30vh;
 }
 
 .clone-canvas {
@@ -82,7 +49,7 @@ html {
 }
 
 .pictochat-load-img {
-    width: 69.5vw;
-    height: 15vh;
+    width: 55vw;
+    height: 10vh;
     position: relative;
 }
