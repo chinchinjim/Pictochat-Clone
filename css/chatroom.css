@@ -41,19 +41,20 @@ canvas {
 .canvas-bg {
     position: absolute;
     display: block;
-    left: 2.5vw;
+    left: 1vw;
 }
 
 .canvas-text {
     position: absolute;
     display: block;
-    left: 2.5vw;
+    left: 1vw;
 }
 
 .canvas {
     position: absolute;
     display: block;
-    left: 2.5vw;
+    left: 1vw;
+    /* background-color: white; */
 }
 
 html {
@@ -61,12 +62,27 @@ html {
 }
 
 .chat-messages {
-    height: 50vh;
-    align-items: center;
+    height: 80vh;
     overflow: auto;
     grid-column: 3 / 3; 
+    width: 70vw;
+    background: repeating-linear-gradient(
+        #aaaaaa,
+        #aaaaaa 10px,
+        #bababa 10px,
+        #bababa 12px);
+}
+
+.spacer{
+    height: 65vh;
 }
 
 .clone-canvas {
     margin: 2rem auto 1rem;
+}
+
+.pictochat-load-img {
+    width: 69.5vw;
+    height: 15vh;
+    position: relative;
 }
