@@ -138,7 +138,7 @@
             ctx.fillRect(canvas.width/4 - (3 * pixel), canvas.height / 5 - (2 * pixel), pixel, pixel);
             ctx.fillRect(pixel, canvas.height / 5 - pixel, canvas.width/4 - (4 * pixel), pixel);
 
-            ctx.fillText(userName, 4 * pixel, canvas.height / 7, 57 * pixel);
+            ctx.fillText(userName, 4 * pixel, 11.5 * pixel, 57 * pixel);
 
             clearCorners(ctx);
 
@@ -263,30 +263,30 @@
             if(e.key === "Backspace" || e.key === "Delete"){
                 charCount = charCount - 1;
                 if (charCount >= 151) {
-                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 4) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 4) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                     line5 = line5.slice(0, -1);
                     ctxText.fillText(line5, 4 * pixel, ((canvas.height / 5) * 5) - (2 * pixel));
                     charCount = charCount - 1;
                 }
                 else if (charCount >= 111) {
-                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 3) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 3) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                     ctxText.fillText(line4, 4 * pixel, ((canvas.height / 5) * 4) - (2 * pixel));
                     charCount = charCount - 1;
                 }
                 else if (charCount >= 71) {
-                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 2) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 2) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                     line3 = line3.slice(0, -1);
                     ctxText.fillText(line3, 4 * pixel, ((canvas.height / 5) * 3) - (2 * pixel));
                     charCount = charCount - 1;
                 }
                 else if (charCount >= 31) {
-                    ctxText.clearRect(3 * pixel, (canvas.height / 5) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                    ctxText.clearRect(3 * pixel, (canvas.height / 5) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                     line2 = line2.slice(0, -1);
                     ctxText.fillText(line2, 4 * pixel, ((canvas.height / 5) * 2) - (2 * pixel));
                     charCount = charCount - 1;
                 }
                 else if(charCount < 31) {
-                    ctxText.clearRect(canvas.width / 4 + pixel, 3 * pixel, (canvas.width / 4) * 3 - (4 * pixel), canvas.height / 5 - (5 * pixel));
+                    ctxText.clearRect(canvas.width / 4 + pixel, 3 * pixel, (canvas.width / 4) * 3 - (4 * pixel), canvas.height);
                     line1 = line1.slice(0, -1);
                     ctxText.fillText(line1, canvas.width / 4 + (2 * pixel), (canvas.height / 5) - (2 * pixel));
                     if(charCount - 1 >= 0){
@@ -299,27 +299,27 @@
                 //full
             }
             else if(charCount >= 151){
-                ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 4) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 4) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line5 = line5 + e.key;
                 ctxText.fillText(line5, 4 * pixel, ((canvas.height / 5) * 5) - (2 * pixel));
             }
             else if(charCount >= 111){
-                ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 3) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 3) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line4 = line4 + e.key;
                 ctxText.fillText(line4, 4 * pixel, ((canvas.height / 5) * 4) - (2 * pixel));
             }
             else if (charCount >= 71){
-                ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 2) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 2) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line3 = line3 + e.key;
                 ctxText.fillText(line3, 4 * pixel, ((canvas.height / 5) * 3) - (2 * pixel));
             }
             else if (charCount >= 31){
-                ctxText.clearRect(3 * pixel, (canvas.height / 5) + pixel, canvas.width - (6 * pixel), canvas.height / 5 - (2 * pixel));
+                ctxText.clearRect(3 * pixel, (canvas.height / 5) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line2 = line2 + e.key;
                 ctxText.fillText(line2, 4 * pixel, ((canvas.height / 5) * 2) - (2 * pixel));
             }
             else if (charCount < 31){
-                ctxText.clearRect(canvas.width / 4 + pixel, 3 * pixel, (canvas.width / 4) * 3 - (4 * pixel), canvas.height / 5 - (5 * pixel));
+                ctxText.clearRect(canvas.width / 4 + pixel, 3 * pixel, (canvas.width / 4) * 3 - (4 * pixel), canvas.height / 5);
                 line1 = line1 + e.key;
                 ctxText.fillText(line1, canvas.width / 4 + (2 * pixel), (canvas.height / 5) - (2 * pixel));
             }
