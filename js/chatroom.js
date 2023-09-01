@@ -33,6 +33,12 @@
             cv.width = window.innerWidth * 0.50;
         }
 
+        // window.addEventListener('resize', function() {
+        //     resizeCanvas(canvas);
+        //     resizeCanvas(canvasBg);
+        //     resizeCanvas(canvasText);
+        // });
+
         function clearCorners(cv) {
             const pixel = canvas.width / 256;
             //clearing the corners
@@ -90,7 +96,7 @@
         const font = new FontFace('pictochat', 'url(../fonts/pictochat.ttf)');
         font.load().then((loadedFont) => {
             document.fonts.add(loadedFont);
-            ctx.font = "8vh pictochat";
+            ctx.font = "5vh pictochat";
             drawNameTag();
         }).catch((error) => {
             console.error('Font could not be loaded:', error);
@@ -225,7 +231,7 @@
             clearCorners(destCtx);
             destCtx.drawImage(canvas, 0, 0);
             destCtx.fillStyle = "black";
-            destCtx.font = "8vh pictochat";
+            destCtx.font = "5vh pictochat";
             destCtx.fillText(line5, 4 * pixel, ((canvas.height / 5) * 5) - (2 * pixel));
             destCtx.fillText(line4, 4 * pixel, ((canvas.height / 5) * 4) - (2 * pixel));
             destCtx.fillText(line3, 4 * pixel, ((canvas.height / 5) * 3) - (2 * pixel));
@@ -257,36 +263,37 @@
         // document.body.appendChild(userName);
 
         window.addEventListener("keydown", function(e) {
-            ctxText.font = "8vh pictochat";
+            ctxText.font = "5vh pictochat";
             ctxText.fillStyle = "black";
             charCount++;
             if(e.key === "Backspace" || e.key === "Delete"){
                 charCount = charCount - 1;
-                if (charCount >= 151) {
-                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 4) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
+                if (charCount >= 181) {
+                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 4) + pixel, canvas.width, canvas.height / 5);
                     line5 = line5.slice(0, -1);
                     ctxText.fillText(line5, 4 * pixel, ((canvas.height / 5) * 5) - (2 * pixel));
                     charCount = charCount - 1;
                 }
-                else if (charCount >= 111) {
-                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 3) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
+                else if (charCount >= 133) {
+                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 3) + pixel, canvas.width, canvas.height / 5);
+                    line4 = line4.slice(0, -1);
                     ctxText.fillText(line4, 4 * pixel, ((canvas.height / 5) * 4) - (2 * pixel));
                     charCount = charCount - 1;
                 }
-                else if (charCount >= 71) {
-                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 2) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
+                else if (charCount >= 85) {
+                    ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 2) + pixel, canvas.width, canvas.height / 5);
                     line3 = line3.slice(0, -1);
                     ctxText.fillText(line3, 4 * pixel, ((canvas.height / 5) * 3) - (2 * pixel));
                     charCount = charCount - 1;
                 }
-                else if (charCount >= 31) {
-                    ctxText.clearRect(3 * pixel, (canvas.height / 5) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
+                else if (charCount >= 37) {
+                    ctxText.clearRect(3 * pixel, (canvas.height / 5) + pixel, canvas.width, canvas.height / 5);
                     line2 = line2.slice(0, -1);
                     ctxText.fillText(line2, 4 * pixel, ((canvas.height / 5) * 2) - (2 * pixel));
                     charCount = charCount - 1;
                 }
-                else if(charCount < 31) {
-                    ctxText.clearRect(canvas.width / 4 + pixel, 3 * pixel, (canvas.width / 4) * 3 - (4 * pixel), canvas.height);
+                else if(charCount < 37) {
+                    ctxText.clearRect(canvas.width / 4 + pixel, 3 * pixel, canvas.width, canvas.height);
                     line1 = line1.slice(0, -1);
                     ctxText.fillText(line1, canvas.width / 4 + (2 * pixel), (canvas.height / 5) - (2 * pixel));
                     if(charCount - 1 >= 0){
@@ -294,31 +301,31 @@
                     }
                 }
             }
-            else if(charCount >= 191){
+            else if(charCount >= 229){
                 charCount--;
                 //full
             }
-            else if(charCount >= 151){
+            else if(charCount >= 181){
                 ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 4) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line5 = line5 + e.key;
                 ctxText.fillText(line5, 4 * pixel, ((canvas.height / 5) * 5) - (2 * pixel));
             }
-            else if(charCount >= 111){
+            else if(charCount >= 133){
                 ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 3) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line4 = line4 + e.key;
                 ctxText.fillText(line4, 4 * pixel, ((canvas.height / 5) * 4) - (2 * pixel));
             }
-            else if (charCount >= 71){
+            else if (charCount >= 85){
                 ctxText.clearRect(3 * pixel, ((canvas.height / 5) * 2) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line3 = line3 + e.key;
                 ctxText.fillText(line3, 4 * pixel, ((canvas.height / 5) * 3) - (2 * pixel));
             }
-            else if (charCount >= 31){
+            else if (charCount >= 37){
                 ctxText.clearRect(3 * pixel, (canvas.height / 5) + pixel, canvas.width - (6 * pixel), canvas.height / 5);
                 line2 = line2 + e.key;
                 ctxText.fillText(line2, 4 * pixel, ((canvas.height / 5) * 2) - (2 * pixel));
             }
-            else if (charCount < 31){
+            else if (charCount < 37){
                 ctxText.clearRect(canvas.width / 4 + pixel, 3 * pixel, (canvas.width / 4) * 3 - (4 * pixel), canvas.height / 5);
                 line1 = line1 + e.key;
                 ctxText.fillText(line1, canvas.width / 4 + (2 * pixel), (canvas.height / 5) - (2 * pixel));
