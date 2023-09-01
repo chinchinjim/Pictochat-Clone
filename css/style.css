@@ -15,6 +15,11 @@ body {
     margin: 0;
 }
 
+h1 {
+    color: #eee;
+    font-size: 3rem;
+}
+
 .ds-body {
     display: grid;
     grid-template-columns: 20vw 60vw 20vw;

@@ -41,7 +41,7 @@ canvas {
 }
 
 .spacer{
-    height: 30vh;
+    height: 40vh;
 }
 
 .clone-canvas {
@@ -49,7 +49,7 @@ canvas {
 }
 
 .pictochat-load-img {
-    width: 55vw;
+    width: 51vw;
     height: 10vh;
     position: relative;
 }
