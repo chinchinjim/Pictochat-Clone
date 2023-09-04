@@ -206,12 +206,8 @@ h1 {
     grid-column: 2 / 3;
     border: solid 20px #222;
     padding: 2rem 5rem;
-    background: repeating-linear-gradient(
-        #aaaaaa,
-        #aaaaaa 10px,
-        #bababa 10px,
-        #bababa 12px);
     margin-bottom: 3rem;
+
 }
 
 .right-controls {

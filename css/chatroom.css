@@ -55,3 +55,11 @@ canvas {
     height: 10vh;
     position: relative;
 }
+
+.bottom-screen {
+    background: repeating-linear-gradient(
+        #aaaaaa,
+        #aaaaaa 10px,
+        #bababa 10px,
+        #bababa 12px);
+}

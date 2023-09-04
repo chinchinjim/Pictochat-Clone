@@ -1,0 +1,102 @@
+.bottom-screen{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-image: 
+    repeating-linear-gradient(
+      90deg,
+      #c4c4cc,
+      #c4c4cc 3px,
+      rgba(0,0,0,0) 3px,
+      rgba(0,0,0,0) 45px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #c4c4cc,
+      #c4c4cc 3px,
+      #f8f9fb 3px,
+      #f8f9fb 6px,
+      #dfe2e6 6px,
+      #dfe2e6 9px,
+      #f8f9fb 9px,
+      #f8f9fb 12px,
+      #dfe2e6 12px,
+      #dfe2e6 15px,
+      #f8f9fb 15px,
+      #f8f9fb 18px,
+      #dfe2e6 18px,
+      #dfe2e6 21px,
+      #f8f9fb 21px,
+      #f8f9fb 24px,
+      #dfe2e6 24px,
+      #dfe2e6 27px,
+      #f8f9fb 27px,
+      #f8f9fb 30px,
+      #dfe2e6 30px,
+      #dfe2e6 33px,
+      #f8f9fb 33px,
+      #f8f9fb 36px,
+      #dfe2e6 36px,
+      #dfe2e6 39px,
+      #f8f9fb 39px,
+      #f8f9fb 42px,
+      #dfe2e6 42px,
+      #dfe2e6 45px,
+      #f8f9fb 45px,
+      #f8f9fb 48px
+    );
+}
+
+.top-screen {
+    position: relative;
+    background-image: 
+    repeating-linear-gradient(
+      90deg,
+      #c4c4cc,
+      #c4c4cc 3px,
+      rgba(0,0,0,0) 3px,
+      rgba(0,0,0,0) 45px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #c4c4cc,
+      #c4c4cc 3px,
+      #f8f9fb 3px,
+      #f8f9fb 6px,
+      #dfe2e6 6px,
+      #dfe2e6 9px,
+      #f8f9fb 9px,
+      #f8f9fb 12px,
+      #dfe2e6 12px,
+      #dfe2e6 15px,
+      #f8f9fb 15px,
+      #f8f9fb 18px,
+      #dfe2e6 18px,
+      #dfe2e6 21px,
+      #f8f9fb 21px,
+      #f8f9fb 24px,
+      #dfe2e6 24px,
+      #dfe2e6 27px,
+      #f8f9fb 27px,
+      #f8f9fb 30px,
+      #dfe2e6 30px,
+      #dfe2e6 33px,
+      #f8f9fb 33px,
+      #f8f9fb 36px,
+      #dfe2e6 36px,
+      #dfe2e6 39px,
+      #f8f9fb 39px,
+      #f8f9fb 42px,
+      #dfe2e6 42px,
+      #dfe2e6 45px,
+      #f8f9fb 45px,
+      #f8f9fb 48px
+    );
+}
+
+.top-screen img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

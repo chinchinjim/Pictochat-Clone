@@ -6,7 +6,7 @@
 
     function nameSubmit() {
         userName = userNameInput.value;
-        window.location.href = "chatroom.html?message=" + encodeURIComponent(userName);
+        window.location.href = "color-pick.html?message=" + encodeURIComponent(userName);
     }
     
     var nameSubmitBtn = document.querySelector("#name-submit-btn");
