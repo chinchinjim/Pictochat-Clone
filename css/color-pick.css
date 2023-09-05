@@ -1,7 +1,7 @@
 .bottom-screen{
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 12% 1fr 12%;
     background-image: 
     repeating-linear-gradient(
       90deg,
@@ -99,4 +99,156 @@
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.top-bar{
+  border-bottom: 2px solid black;
+  background: linear-gradient(#b9b8f191, #B9B8F1);
+  background-color: white;
+  width: 100%;
+}
+
+.bottom-bar{
+  border-top: 2px solid black;
+  background: linear-gradient(#B9B8F1, #b9b8f183);
+  background-color: white;
+  width: 100%;
+}
+
+.inner-color-display{
+  display: grid;
+  grid-template-columns: 50% 15% 30%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.color-palette {
+  border: solid 5px #c4c4cc;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.gray {
+  background-color: #61819a;
+  background-clip: content-box;
+}
+
+.brown {
+  background-color: #bb4900;
+}
+
+.red {
+  background-color: #fb0118;
+}
+
+.pink {
+  background-color: #fa8afb;
+}
+
+.orange {
+  background-color: #fb9200;
+}
+
+.yellow {
+  background-color: #f3e400;
+}
+
+.lime {
+  background-color: #aafb00;
+}
+
+.green {
+  background-color: #02fb02;
+}
+
+.forest {
+  background-color: #03a139;
+}
+
+.teal {
+  background-color: #4adb8a;
+}
+
+.cyan {
+  background-color: #32baf3;
+}
+
+.blue {
+  background-color: #005af3;
+}
+
+.azure {
+  background-color: #000092;
+}
+
+.purple {
+  background-color: #8a01d4;
+}
+
+.lilac {
+  background-color: #d300eb;
+}
+
+.fuchsia {
+  background-color: #fb0092;
+}
+
+.active-color {
+  position: relative;
+}
+.active-color:after {
+  content: " ";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 3px dashed;
+  border-color: #32baf3;
+}
+
+.color {
+  position: relative;
+}
+.color:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 18px solid white;
+}
+
+.choose-color {
+  font-size: 4vh;
+  background: linear-gradient(#c4c4cc, white);
+  padding: 1rem;
+  border: solid 4px #c4c4cc;
+}
+
+.curr-color {
+  width: 100%;
+  height: 50%;
+  grid-column: 3 / 4;
+  padding-top: 18%;
+}
+
+.active-color-display {
+  height: 100%;
+  background-color: pink;
+  border-left: solid 4px #c4c4cc;
+  border-right: solid 4px #c4c4cc;
+  border-bottom: solid 4px #c4c4cc;
+}
+
+.bottom-bar button {
+  font-family: pictochat;
+  font-size: 3vh;
+  padding: 0.5rem 1rem;
+  margin-top: 0.75%;
 }
