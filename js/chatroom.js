@@ -1,5 +1,9 @@
 (function () {
     "use strict";
+    var userName = localStorage.getItem('name');
+    var userColor = localStorage.getItem('colour');
+    var lightColor = localStorage.getItem('light-colour');
+
     window.addEventListener('load', ()=> {
         const canvas = document.querySelector(".canvas");
         const ctx = canvas.getContext("2d");
@@ -67,7 +71,7 @@
         function drawBg(){
             ctxBg.fillStyle = "white";
             ctxBg.fillRect(0, 0, canvas.width, canvas.height);
-            ctxBg.fillStyle = "#B9B8F1";
+            ctxBg.fillStyle = lightColor;
             const pixel = canvas.width / 256;
             ctxBg.fillRect(62 * pixel, canvas.height / 5 - pixel, canvas.width - (64 * pixel), pixel);
             ctxBg.fillRect(2 * pixel, 2 * (canvas.height / 5) - pixel, canvas.width - (4 * pixel), pixel);
@@ -114,13 +118,13 @@
             }
 
             //redraws the nametag rectangle
-            ctx.fillStyle = "#B9B8F1";
+            ctx.fillStyle = lightColor;
 
             ctx.fillRect(0, 0, canvas.width / 4 - pixel, canvas.height / 5 - (2 * pixel));
             ctx.fillRect(0, 0, canvas.width / 4 - (3 * pixel), canvas.height / 5);
 
             //drawing borders of canvas
-            ctx.fillStyle = "#1E1E7D";
+            ctx.fillStyle = userColor;
             ctx.fillRect(3 * pixel, 0, canvas.width - (6 * pixel), pixel); //top
             ctx.fillRect(3 * pixel, canvas.height - pixel, canvas.width - (6 * pixel), pixel); //bottom
             ctx.fillRect(0, 3 * pixel, pixel, canvas.height - (6 * pixel)); //left
@@ -255,8 +259,8 @@
         // const copyBtn = document.querySelector('.clone');
         // cloneBtn.addEventListener('click', clone);
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const userName= urlParams.get("message");
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const userName= urlParams.get("message");
 
         // const userName = document.createElement("p");
         // userName.innerText = receivedData;

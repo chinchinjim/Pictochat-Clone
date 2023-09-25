@@ -6,6 +6,8 @@
     <title>Pictochat</title>
     <link rel="stylesheet" href="css/color-pick.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js"></script>
   </head>
   <body>
     <h1>Pictochat Clone</h1>
@@ -66,11 +68,13 @@
           </div>
           <div class="curr-color">
             <div class="choose-color">Choose Color</div>
-            <div class="active-color-display"></div>
+            <div class="active-color-display" id="active-color-display"></div>
           </div>
         </div>
         <div class="bottom-bar">
-          <button>Confirm</button>
+          <button onClick="window.location.href = 'chatroom.html';">
+            Confirm
+          </button>
         </div>
       </div>
 
@@ -94,6 +98,6 @@
       </div>
     </div>
 
-    <script src="js/index.js"></script>
+    <script src="js/color-pick.js"></script>
   </body>
 </html>

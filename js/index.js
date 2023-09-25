@@ -6,7 +6,8 @@
 
     function nameSubmit() {
         userName = userNameInput.value;
-        window.location.href = "color-pick.html?message=" + encodeURIComponent(userName);
+        localStorage.setItem('name', userName);
+        window.location.href = "color-pick.html";
     }
     
     var nameSubmitBtn = document.querySelector("#name-submit-btn");
