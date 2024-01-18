@@ -3,6 +3,12 @@
     var userName = localStorage.getItem('name');
     var userColor = localStorage.getItem('colour');
     var lightColor = localStorage.getItem('light-colour');
+    var mediumColor = localStorage.getItem('medium-colour');
+
+    const sideButtons = document.querySelectorAll("div.bottom-sidebar > button");
+    sideButtons.forEach(button => {
+        button.style.backgroundColor = mediumColor; 
+      });
 
     window.addEventListener('load', ()=> {
         const canvas = document.querySelector(".canvas");
@@ -33,7 +39,7 @@
         const pixel = canvas.width / 256;
     
         function resizeCanvas(cv){
-            cv.height = window.innerHeight * 0.30;
+            cv.height = window.innerHeight * 0.25;
             cv.width = window.innerWidth * 0.50;
         }
 

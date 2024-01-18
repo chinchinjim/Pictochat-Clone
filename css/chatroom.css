@@ -9,7 +9,7 @@
 canvas {
     display: block;
     position: relative;
-    height: 30vh;
+    height: 25vh;
     width: 50vw;
 }
 
@@ -57,9 +57,41 @@ canvas {
 }
 
 .bottom-screen {
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
         #aaaaaa,
         #aaaaaa 10px,
         #bababa 10px,
-        #bababa 12px);
+        #bababa 12px); */
+        background-color: pink;
+        display: grid;
+        grid-template-columns: 10% 85%;
+        grid-template-rows: 5% 95%;
+}
+
+.bottom-sidebar {
+    display: grid;
+    grid-template-rows: auto;
+    grid-row: 2 / 3;
+    justify-items: center;
+}
+
+.canvases {
+    grid-row: 2 / 3;
+    margin-left: 1vw;
+}
+
+.bottom-sidebar button {
+    height: 2rem;
+    width: 2rem;
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+.draw {
+    background-image: url("../img/pencil.png");
+
+}
+
+.erase {
+    background-image: url("../img/eraser.png");
 }

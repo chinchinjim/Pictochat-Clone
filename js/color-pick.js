@@ -18,10 +18,13 @@
         var tinycolorInstance = tinycolor(activeColor);
         // Make the color lighter by increasing the lightness
         var lighterColor = tinycolorInstance.lighten(30).toString();
+        var mediumColor = tinycolorInstance.darken(15).toString();
         document.documentElement.style.setProperty('--active-color', activeColor);
+        document.documentElement.style.setProperty('--medium-color', mediumColor);
         document.documentElement.style.setProperty('--lighter-color', lighterColor);
         
         localStorage.setItem('colour', activeColor);
+        localStorage.setItem('medium-colour', mediumColor);
         localStorage.setItem('light-colour', lighterColor);
     }
 
