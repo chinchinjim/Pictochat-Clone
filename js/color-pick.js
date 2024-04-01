@@ -17,8 +17,8 @@
         var activeColor = getComputedStyle(this).backgroundColor;
         var tinycolorInstance = tinycolor(activeColor);
         // Make the color lighter by increasing the lightness
-        var lighterColor = tinycolorInstance.lighten(30).toString();
-        var mediumColor = tinycolorInstance.darken(15).toString();
+        var lighterColor = tinycolorInstance.lighten(20).toString();
+        var mediumColor = tinycolorInstance.darken(10).toString();
         document.documentElement.style.setProperty('--active-color', activeColor);
         document.documentElement.style.setProperty('--medium-color', mediumColor);
         document.documentElement.style.setProperty('--lighter-color', lighterColor);

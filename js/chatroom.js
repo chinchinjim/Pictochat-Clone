@@ -43,6 +43,10 @@
             cv.width = window.innerWidth * 0.50;
         }
 
+        const keyboard = document.querySelector(".keyboard");
+        keyboard.height = window.innerHeight * 0.2;
+        keyboard.width = window.innerWidth * 0.50;
+
         // window.addEventListener('resize', function() {
         //     resizeCanvas(canvas);
         //     resizeCanvas(canvasBg);
