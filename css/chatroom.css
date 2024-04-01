@@ -108,3 +108,60 @@ canvas {
     width: 45vw;
     height: 25vh;
 }
+
+.right-sidebar {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    position: relative;
+    right: 3rem;
+    margin-left: 2px;
+}
+
+.right-sidebar .clear {
+    height: 8.3vh;
+    width: 10vh;
+    background-image: url("../img/clear.png");
+    background-size: 10vh 8.3vh;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 10px;
+}
+
+.right-sidebar .clone {
+    height:  8.3vh;
+    width: 10vh;
+    background-image: url("../img/send.png");
+    background-size: 10vh 8.3vh;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+}
+
+.right-sidebar .copy {
+    height:  8.3vh;
+    width: 10vh;
+    background-image: url("../img/copy.png");
+    background-size: 10vh 8.3vh;
+    background-repeat: no-repeat;
+}
+
+.draw-size-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.draw-size-1 .dot {
+    border-radius: 10px;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: black;
+}
+
+.draw-size-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.draw-size-2 .dot {
+    border-radius: 30px;
+    background-color: black;
+}
