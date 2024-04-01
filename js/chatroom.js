@@ -209,9 +209,6 @@
         function drawSize3(){
             ctx.lineWidth = 15;
         }
-        
-        const drawSize3Btn = document.querySelector('.draw-size-3');
-        drawSize3Btn.addEventListener('click', drawSize3);
     
         function clear(){
             ctxText.clearRect(0, 0, canvas.width, canvas.height);

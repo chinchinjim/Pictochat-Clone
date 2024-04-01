@@ -57,12 +57,11 @@ canvas {
 }
 
 .bottom-screen {
-    /* background: repeating-linear-gradient(
+    background: repeating-linear-gradient(
         #aaaaaa,
         #aaaaaa 10px,
         #bababa 10px,
-        #bababa 12px); */
-        background-color: pink;
+        #bababa 12px);
         display: grid;
         grid-template-columns: 10% 85%;
         grid-template-rows: 5% 95%;
